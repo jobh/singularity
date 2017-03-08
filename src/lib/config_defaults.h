@@ -36,6 +36,9 @@
 #define ALLOW_USER_NS "allow user ns"
 #define ALLOW_USER_NS_DEFAULT 1
 
+#define ALLOW_NO_NEW_PRIVS_FAILURE "allow no_new_privs failure"
+#define ALLOW_NO_NEW_PRIVS_FAILURE_DEFAULT 0
+
 #define ENABLE_OVERLAY "enable overlay"
 #define ENABLE_OVERLAY_DEFAULT 0
 

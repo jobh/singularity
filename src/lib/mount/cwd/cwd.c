@@ -120,12 +120,6 @@ void singularity_mount_cwd(void) {
         return;
     }
 
-#ifndef SINGULARITY_NO_NEW_PRIVS
-    singularity_message(WARNING, "Not mounting current directory: host does not support PR_SET_NO_NEW_PRIVS\n");
-    free(cwd_path);
-    return;
-#endif  
-
     singularity_priv_escalate();
     singularity_message(DEBUG, "Creating current working directory inside container\n");
     r = s_mkpath(joinpath(container_dir, cwd_path), 0755);

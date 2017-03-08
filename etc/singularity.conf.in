@@ -28,6 +28,11 @@
 # then no image file may be used.
 @ALLOW_USER_IMAGE@ = @ALLOW_USER_IMAGE_DEFAULT@
 
+# ALLOW PR_SET_NO_NEW_PRIVS FAILURE: [BOOL]
+# DEFAULT: @ALLOW_NO_NEW_PRIVS_FAILURE_DEFAULT@
+# Should execution continue even if PR_SET_NO_NEW_PRIVS fails? If set to
+# 'yes', potentially dangerous binds may be triggered by the user.
+@ALLOW_NO_NEW_PRIVS_FAILURE@ = @ALLOW_NO_NEW_PRIVS_FAILURE_DEFAULT@
 
 # PROTECTED IMAGE MODE: [STRING]
 # DEFAULT: @PROTECTED_IMAGE_MODE_DEFAULT@

@@ -62,11 +62,6 @@ void singularity_mount_scratch(void) {
         return;
     }
 
-#ifndef SINGULARITY_NO_NEW_PRIVS
-        singularity_message(WARNING, "Not mounting scratch: host does not support PR_SET_NO_NEW_PRIVS\n");
-        return;
-#endif  
-
     singularity_message(DEBUG, "Checking if overlay is enabled\n");
     int overlayfs_enabled = singularity_rootfs_overlay_enabled() > 0;
     if ( !overlayfs_enabled ) {
